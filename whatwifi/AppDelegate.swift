@@ -28,9 +28,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func updateTitle() {
-        guard let name = CWWiFiClient.shared().interface()?.ssid() else {
-            return
-        }
+        let name = CWWiFiClient.shared().interface()?.ssid() ?? "Disconnected"
         
         DispatchQueue.main.async {
             self.statusItem.button?.title = name
