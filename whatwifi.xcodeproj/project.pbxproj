@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		34A4ECB81FA37E5800594962 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A4ECB71FA37E5800594962 /* AppDelegate.swift */; };
 		34A4ECBF1FA37E5800594962 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34A4ECBD1FA37E5800594962 /* Main.storyboard */; };
+		34D04C491FAA147100A5777E /* WiFiEventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D04C481FAA147100A5777E /* WiFiEventMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -17,6 +18,7 @@
 		34A4ECBE1FA37E5800594962 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		34A4ECC01FA37E5800594962 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34A4ECC11FA37E5800594962 /* whatwifi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = whatwifi.entitlements; sourceTree = "<group>"; };
+		34D04C481FAA147100A5777E /* WiFiEventMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiEventMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 				34A4ECBD1FA37E5800594962 /* Main.storyboard */,
 				34A4ECC01FA37E5800594962 /* Info.plist */,
 				34A4ECC11FA37E5800594962 /* whatwifi.entitlements */,
+				34D04C481FAA147100A5777E /* WiFiEventMonitor.swift */,
 			);
 			path = whatwifi;
 			sourceTree = "<group>";
@@ -127,6 +130,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34D04C491FAA147100A5777E /* WiFiEventMonitor.swift in Sources */,
 				34A4ECB81FA37E5800594962 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
