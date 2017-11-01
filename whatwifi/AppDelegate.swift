@@ -1,44 +1,27 @@
 //
 //  AppDelegate.swift
-//  wifiname
+//  whatwifi
 //
 //  Created by Jake Bromberg on 10/24/17.
 //  Copyright © 2017 Flat Cap. All rights reserved.
 //
 
 import Cocoa
-import CoreWLAN
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-    
-    let statusItem = NSStatusBar.system.statusItem(withLength:NSStatusItem.squareLength)
-    let wifiClient = CWWiFiClient.shared()
-    
+    let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+    var wifiMonitor: WiFiEventMonitor?
+        
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         statusItem.menu = NSMenu()
         statusItem.menu?.addItem(NSMenuItem(title: "Quit", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
 
-        statusItem.length = NSStatusItem.variableLength
-        
-        updateTitle()
-        
-        wifiClient.delegate = self
-        try! wifiClient.startMonitoringEvent(with: .ssidDidChange)
-    }
-    
-    func updateTitle() {
-        let name = CWWiFiClient.shared().interface()?.ssid() ?? "Disconnected"
-        
-        DispatchQueue.main.async {
-            self.statusItem.button?.title = name
-            self.statusItem.button?.setNeedsDisplay()
+        wifiMonitor = try! WiFiEventMonitor { ssidName in
+            DispatchQueue.main.async {
+                self.statusItem.button?.title = ssidName
+                self.statusItem.button?.setNeedsDisplay()
+            }
         }
-    }
-}
-
-extension AppDelegate: CWEventDelegate {
-    func ssidDidChangeForWiFiInterface(withName interfaceName: String) {
-        updateTitle()
     }
 }
