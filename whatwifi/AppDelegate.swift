@@ -20,7 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         wifiMonitor = try! WiFiEventMonitor { ssidName in
             DispatchQueue.main.async {
                 self.statusItem.button?.title = ssidName
-                self.statusItem.button?.setNeedsDisplay()
+                self.statusItem.button?.needsDisplay = true
             }
         }
     }
