@@ -1,2 +1,6 @@
 DerivedData
+.DS_Store
+whatwifi.xcodeproj/project.xcworkspace/xcshareddata/
+whatwifi.xcodeproj/project.xcworkspace/xcuserdata/
+whatwifi.xcodeproj/xcuserdata/jake.xcuserdatad/
 whatwifi.xcodeproj/xcuserdata/jakebromberg.xcuserdatad
