@@ -3,16 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 53;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		239A335D2AC89CAA002223DE /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239A335C2AC89CAA002223DE /* LocationManager.swift */; };
 		34A4ECB81FA37E5800594962 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A4ECB71FA37E5800594962 /* AppDelegate.swift */; };
 		34A4ECBF1FA37E5800594962 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34A4ECBD1FA37E5800594962 /* Main.storyboard */; };
 		34D04C491FAA147100A5777E /* WiFiEventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D04C481FAA147100A5777E /* WiFiEventMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		239A335C2AC89CAA002223DE /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		34A4ECB41FA37E5800594962 /* whatwifi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whatwifi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34A4ECB71FA37E5800594962 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34A4ECBE1FA37E5800594962 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -35,6 +37,7 @@
 		34A4ECAB1FA37E5800594962 = {
 			isa = PBXGroup;
 			children = (
+				239A335C2AC89CAA002223DE /* LocationManager.swift */,
 				34A4ECB61FA37E5800594962 /* whatwifi */,
 				34A4ECB51FA37E5800594962 /* Products */,
 			);
@@ -88,12 +91,12 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				ORGANIZATIONNAME = "Flat Cap";
 				TargetAttributes = {
 					34A4ECB31FA37E5800594962 = {
 						CreatedOnToolsVersion = 9.1;
-						LastSwiftMigration = "";
+						LastSwiftMigration = 1340;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -134,6 +137,7 @@
 			files = (
 				34D04C491FAA147100A5777E /* WiFiEventMonitor.swift in Sources */,
 				34A4ECB81FA37E5800594962 /* AppDelegate.swift in Sources */,
+				239A335D2AC89CAA002223DE /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +193,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -250,6 +255,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -271,6 +277,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = whatwifi/whatwifi.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
@@ -280,7 +287,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flatcap.com.whatwifi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -292,6 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = whatwifi/whatwifi.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
@@ -301,7 +309,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.flatcap.com.whatwifi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
